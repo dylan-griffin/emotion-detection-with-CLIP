@@ -1,33 +1,37 @@
+# Emotion Detection with CLIP
 
-# Purpose
+Trains facial emotion recognition models on FER2013 and visualizes image and text embeddings with t-SNE.
 
-•	Generate AI models that detect human facial emotion and text/image embeddings of human facial-related data
+This work was part of a collaborative research paper on how data vectorization affects emotion-recognition AI, accepted by the National High School Journal of Science. Vectorized models reached a 32% accuracy increase over standardized baseline models.
 
-•	Display emotion model performance data (i.e. loss curve, confusion matrix, etc.)
+## Tech Stack
 
-•	Plot image and text embeddings of human facial-related data for collection and comparison
+Python, Scikit-learn, PyTorch, Hugging Face Transformers (CLIP), Matplotlib, Seaborn, t-SNE
 
-  
+## Features
 
-# Instructions
-## Dependencies
+- Generate AI models that detect human facial emotion, and text/image embeddings of facial-related data
+- Display model performance data (loss curve, confusion matrix, etc.)
+- Plot image and text embeddings for collection and comparison
 
-1. Download the FER2013 test and train set `fer2013.tar.gz` file at `https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data?select=test.csv`
+## Setup
 
-2. Create a `data` folder in your workspace
-3. Create a `fer2013` folder in your `data` folder
-4. Add the contents of the `fer2013.tar.gz` file to your fer2013 folder
-
-
-Your data folder should have this ***EXACT*** structure:
+1. Clone the repo and install dependencies:
 
 ```
-	├── data
-	│   ├── fer2013
-	│   │   ├── fer2013.csv
- ```
+pip install -r requirements.txt
+```
 
-5. Install project dependencies
+2. Download the FER2013 dataset from Kaggle (`fer2013.tar.gz`): https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
+3. Create a `data/fer2013` folder in the project root and extract the dataset contents into it.
+
+Your data folder should look like this:
+
+```
+data
+  fer2013
+    fer2013.csv
+```
 
 ## Creating a model
 
@@ -93,3 +97,8 @@ Your data folder should have this ***EXACT*** structure:
 
 	#### `--titles` **OR** `-T`:
 	Generate titles for the plots
+
+
+## License
+
+MIT
